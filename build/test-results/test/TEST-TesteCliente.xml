@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TesteCliente" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-25T04:11:51" hostname="DESKTOP-OQSRQD4" time="0.964">
+<testsuite name="TesteCliente" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-25T15:48:05" hostname="DESKTOP-OQSRQD4" time="0.982">
   <properties/>
-  <testcase name="Quando eu deletar um cliente, EntÃ£o deve retornar o cliente deletado" classname="TesteCliente" time="0.964"/>
+  <testcase name="Quando eu deletar um cliente, EntÃ£o deve retornar o cliente deletado" classname="TesteCliente" time="0.982"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

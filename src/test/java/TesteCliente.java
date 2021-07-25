@@ -53,6 +53,13 @@ class TesteCliente {
     @DisplayName("Quando eu atualizar um cliente, Então deve retornar o cliente atualizado")
     void atualizaCliente() {
 
+        String clienteParaCadastrar = "{\n" +
+                "  \"id\": 1,\n" +
+                "  \"idade\": 41,\n" +
+                "  \"nome\": \"George\",\n" +
+                "  \"risco\": 0\n" +
+                "}";
+
         String clienteParaAtualizar = "{\n" +
                 "  \"id\": 1,\n" +
                 "  \"idade\": 41,\n" +
@@ -61,6 +68,15 @@ class TesteCliente {
                 "}";
 
         String retornoClienteAtualizado = "{\"1\":{\"nome\":\"George Mathias\",\"idade\":41,\"id\":1,\"risco\":0}}";
+
+        given()
+                .contentType(ContentType.JSON)
+                .body(clienteParaCadastrar)
+        .when()
+                .post(urlApiCliente + endpointCliente)
+        .then()
+                .statusCode(201);
+
 
         given()
                 .contentType(ContentType.JSON)
@@ -76,14 +92,30 @@ class TesteCliente {
     @DisplayName("Quando eu deletar um cliente, Então deve retornar o cliente deletado")
     void deletaCliente() {
 
+        String clienteParaCadastrar = "{\n" +
+                "  \"id\": 1,\n" +
+                "  \"idade\": 41,\n" +
+                "  \"nome\": \"George\",\n" +
+                "  \"risco\": 0\n" +
+                "}";
+
         String id = "/1";
         String clienteRemovido = "CLIENTE REMOVIDO: { NOME: George, IDADE: 41, ID: 1 }";
+
+        given()
+                .contentType(ContentType.JSON)
+                .body(clienteParaCadastrar)
+        .when()
+                .post(urlApiCliente + endpointCliente)
+        .then()
+                .statusCode(201);
 
         given()
                 .contentType(ContentType.JSON)
         .when()
                 .delete(urlApiCliente + endpointCliente + id)
         .then()
+                .statusCode(200)
                 .assertThat().body(containsString(clienteRemovido));
     }
 }
