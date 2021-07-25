@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TesteCliente" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-24T23:16:08" hostname="DESKTOP-OQSRQD4" time="0.98">
+  <properties/>
+  <testcase name="Quando eu cadastrar um clientes, entÃ£o deve retornar o cliente cadastrado" classname="TesteCliente" time="0.959"/>
+  <testcase name="Quando pegar eu todos os clientes na primeira vez, entÃ£o a lista deve retornar vazia" classname="TesteCliente" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
